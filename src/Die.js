@@ -3,7 +3,7 @@ import React from 'react';
 const Die = (props)=>{
   return (
   <div className='Die'>
-    <p>im a Die!!</p>
+    <i className="fas fa-dice-one"></i>
   </div>
   )
 }
