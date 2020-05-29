@@ -7,6 +7,12 @@ class RollDice extends React.Component{
     first:randomize(),
     second:randomize(),
   }
+  roll = () =>{
+    console.log("Im on a roll!")
+    let first = randomize();
+    let second= randomize();
+    this.setState({first,second});
+  }
   render(){
     return(
       <div className="RollDice">
