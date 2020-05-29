@@ -1,6 +1,7 @@
 import React from 'react';
 import Die from './Die';
 
+const randomize = ()=> Math.ceil(Math.random()*6);
 class RollDice extends React.Component{
   render(){
     return(
