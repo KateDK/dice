@@ -5,6 +5,9 @@ class RollDice extends React.Component{
     return(
       <div className="RollDice">
         Hello!
+        <div>
+          <button>Roll'em</button>
+        </div>
       </div>
     )
   }
