@@ -1,4 +1,5 @@
 import React from 'react';
+import './Die.css'
 
 const Die = (props)=>{
   const {num} = props;
