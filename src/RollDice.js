@@ -2,6 +2,7 @@ import React from 'react';
 import Die from './Die';
 
 const randomize = ()=> Math.ceil(Math.random()*6);
+
 class RollDice extends React.Component{
   state={
     first:randomize(),
@@ -13,15 +14,16 @@ class RollDice extends React.Component{
     let second= randomize();
     this.setState({first,second});
   }
+
   render(){
     const dice = ['one','two','three','four','five','six'];
     const {first,second} =this.state;
     return(
       <div className="RollDice">
-        <Die/>
-        <Die/>
+        <Die num={dice[first+1]}/>
+        <Die num={dice[second+1]}/>
         <div>
-          <button>Roll'em</button>
+          <button onClick={this.roll}>Roll'em</button>
         </div>
       </div>
     )
