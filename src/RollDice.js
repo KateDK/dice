@@ -21,14 +21,12 @@ class RollDice extends React.Component{
     const {first,second} =this.state;
     return(
       <div className="RollDice">
-        <Die num={dice[first+1]}/>
-        <Die num={dice[second+1]}/>
         <div className="RollDice_diceHolder">
           <Die num={dice[first+1]}/>
           <Die num={dice[second+1]}/>
         </div>
         <div>
-          <button onClick={this.roll}>Roll'em</button>
+          <button className='RollDice_button' onClick={this.roll}>Roll'em</button>
         </div>
       </div>
     )

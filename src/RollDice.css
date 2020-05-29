@@ -1,5 +1,27 @@
+.RollDice {
+  padding: 3%;
+}
+
 .RollDice_diceHolder {
   display: flex;
   flex-direction: row;
   justify-content: center;
+}
+
+.RollDice_button {
+  background-color: darkslategray;
+  color: darkcyan;
+  width: 300px;
+  height: 150px;
+  border-radius: 25px;
+  font-size: 75px;
+}
+
+.RollDice_button:hover {
+  background-color: aquamarine;
+  border-color: aquamarine;
+}
+
+.RollDice_button:focus {
+  outline: 0;
 }
