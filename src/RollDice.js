@@ -14,6 +14,8 @@ class RollDice extends React.Component{
     this.setState({first,second});
   }
   render(){
+    const dice = ['one','two','three','four','five','six'];
+    const {first,second} =this.state;
     return(
       <div className="RollDice">
         <Die/>
