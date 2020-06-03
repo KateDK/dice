@@ -8,22 +8,24 @@ class RollDice extends React.Component{
   state={
     first:randomize(),
     second:randomize(),
+    rolling: false,
   }
   roll = () =>{
     console.log("Im on a roll!")
     let first = randomize();
     let second= randomize();
-    this.setState({first,second});
+    this.setState({rolling:true})
+    setTimeout(()=>this.setState({first,second, rolling:false}),1000);
   }
 
   render(){
     const dice = ['one','two','three','four','five','six'];
-    const {first,second} =this.state;
+    const {first,second, rolling} =this.state;
     return(
       <div className="RollDice">
         <div className="RollDice_diceHolder">
-          <Die num={dice[first+1]}/>
-          <Die num={dice[second+1]}/>
+          <Die num={dice[first+1]} rolling={rolling}/>
+          <Die num={dice[second+1]} rolling={rolling}/>
         </div>
         <div>
           <button className='RollDice_button' onClick={this.roll}>Roll'em</button>
