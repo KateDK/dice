@@ -11,7 +11,6 @@ class RollDice extends React.Component{
     rolling: false,
   }
   roll = () =>{
-    console.log("Im on a roll!")
     let first = randomize();
     let second= randomize();
     this.setState({rolling:true})
