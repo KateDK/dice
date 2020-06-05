@@ -4,27 +4,27 @@ import './RollDice.css'
 
 const randomize = ()=> Math.ceil(Math.random()*6);
 
+const faces = ['one','two','three','four','five','six'];
 class RollDice extends React.Component{
   state={
-    first:randomize(),
-    second:randomize(),
+    first:'one',
+    second:'one',
     rolling: false,
   }
   roll = () =>{
     let first = randomize();
     let second= randomize();
     this.setState({rolling:true})
-    setTimeout(()=>this.setState({first,second, rolling:false}),1000);
+    setTimeout(()=>this.setState({first:faces[first],second:faces[second], rolling:false}),1000);
   }
 
   render(){
-    const dice = ['one','two','three','four','five','six'];
     const {first,second, rolling} =this.state;
     return(
       <div className="RollDice">
         <div className="RollDice_diceHolder">
-          <Die num={dice[first+1]} rolling={rolling}/>
-          <Die num={dice[second+1]} rolling={rolling}/>
+          <Die num={first} rolling={rolling}/>
+          <Die num={second} rolling={rolling}/>
         </div>
         <div>
           {rolling ?
