@@ -25,3 +25,7 @@
 .RollDice_button:focus {
   outline: 0;
 }
+
+.RollDice_button:disabled {
+  background-color: dimgray;
+}

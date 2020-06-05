@@ -20,7 +20,6 @@ class RollDice extends React.Component{
   render(){
     const dice = ['one','two','three','four','five','six'];
     const {first,second, rolling} =this.state;
-    const buttonClass = rolling ? 'RollDice_button rolling' : 'RollDice_button'
     return(
       <div className="RollDice">
         <div className="RollDice_diceHolder">
@@ -28,7 +27,10 @@ class RollDice extends React.Component{
           <Die num={dice[second+1]} rolling={rolling}/>
         </div>
         <div>
-          <button className={buttonClass} onClick={this.roll}>{rolling ? `Rolling...` : `Roll'em!`}</button>
+          {rolling ?
+          <button disabled className='RollDice_button'>Rolling..</button> :
+          <button className='RollDice_button' onClick={this.roll}>Roll'em!</button>
+          }
         </div>
       </div>
     )
