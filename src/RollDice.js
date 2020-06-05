@@ -23,8 +23,8 @@ class RollDice extends React.Component{
     return(
       <div className="RollDice">
         <div className="RollDice_diceHolder">
-          <Die num={first} rolling={rolling}/>
-          <Die num={second} rolling={rolling}/>
+          <Die face={first} rolling={rolling}/>
+          <Die face={second} rolling={rolling}/>
         </div>
         <div>
           {rolling ?
