@@ -21,7 +21,7 @@ class RollDice extends React.Component{
   roll = () =>{
     let first = randomize();
     let second= randomize();
-    this.setState({rolling:true})
+    this.setState({rolling:true});
     setTimeout(()=>this.setState({first:faces[first],second:faces[second], rolling:false}),1000);
   }
 
@@ -34,10 +34,7 @@ class RollDice extends React.Component{
           <Die face={second} rolling={rolling}/>
         </div>
         <div>
-          {rolling ?
-          <button disabled className='RollDice_button'>Rolling..</button> :
-          <button className='RollDice_button' onClick={this.roll}>Roll'em!</button>
-          }
+          <button disabled={rolling} onClick={this.roll}className='RollDice_button'>{rolling ? 'Rolling..' : `Roll'em!`}</button>
         </div>
       </div>
     )
