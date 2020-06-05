@@ -20,6 +20,7 @@
 .RollDice_button:hover {
   background-color: aquamarine;
   border-color: aquamarine;
+  cursor: pointer;
 }
 
 .RollDice_button:focus {
@@ -28,4 +29,5 @@
 
 .RollDice_button:disabled {
   background-color: dimgray;
+  cursor: wait;
 }
