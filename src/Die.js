@@ -3,13 +3,9 @@ import './Die.css'
 
 const Die = (props)=>{
   const {num, rolling} = props;
-  const dieName = `fas fa-dice-${num}`
   const cName = rolling ? "Die rolling" : "Die"
-  return (
-  <div className={cName}>
-    <i className={dieName}></i>
-  </div>
-  )
+  return <i className={`${cName} fas fa-dice-${num}`}></i>
+
 }
 
 
