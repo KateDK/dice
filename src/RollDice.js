@@ -5,12 +5,19 @@ import './RollDice.css'
 const randomize = ()=> Math.floor(Math.random()*6);
 
 const faces = ['one','two','three','four','five','six'];
+
 class RollDice extends React.Component{
   state={
     first:'one',
     second:'one',
     rolling: false,
   }
+  componentDidMount(){
+    let first = randomize();
+    let second= randomize();
+    this.setState({first:faces[first],second:faces[second]})
+  }
+
   roll = () =>{
     let first = randomize();
     let second= randomize();
