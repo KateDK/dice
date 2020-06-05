@@ -2,7 +2,7 @@ import React from 'react';
 import Die from './Die';
 import './RollDice.css'
 
-const randomize = ()=> Math.ceil(Math.random()*6);
+const randomize = ()=> Math.floor(Math.random()*6);
 
 const faces = ['one','two','three','four','five','six'];
 class RollDice extends React.Component{
